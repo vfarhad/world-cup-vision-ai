@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { mockRoundOf32 } from '@/data/mockData';
+import { Link } from 'react-router-dom';
 
 const RoundOf32 = () => {
   return (
@@ -19,7 +20,20 @@ const RoundOf32 = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mockRoundOf32.map((match, index) => (
-          <KnockoutMatchCard key={index} match={match} stageType="Round of 32" />
+          <KnockoutMatchCard 
+            key={index} 
+            match={match} 
+            stageType="Round of 32"
+            renderButton={(matchId) => (
+              <Link to={`/matches/${matchId}`}>
+                <Button 
+                  className="w-full bg-fifa-blue hover:bg-fifa-navy text-white"
+                >
+                  View match details
+                </Button>
+              </Link>
+            )}
+          />
         ))}
       </div>
     </div>
@@ -28,10 +42,12 @@ const RoundOf32 = () => {
 
 export const KnockoutMatchCard = ({ 
   match, 
-  stageType 
+  stageType,
+  renderButton 
 }: { 
   match: any; 
   stageType: string;
+  renderButton?: (matchId: any) => React.ReactNode;
 }) => {
   const [showPrediction, setShowPrediction] = useState(false);
   
@@ -85,13 +101,17 @@ export const KnockoutMatchCard = ({
         </div>
         
         <div className="border-t p-4">
-          <Button
-            variant="outline"
-            onClick={() => setShowPrediction(!showPrediction)}
-            className="w-full"
-          >
-            {showPrediction ? 'Hide Prediction' : 'Show Prediction'}
-          </Button>
+          {renderButton ? (
+            renderButton(match.matchNumber)
+          ) : (
+            <Button
+              variant="outline"
+              onClick={() => setShowPrediction(!showPrediction)}
+              className="w-full"
+            >
+              {showPrediction ? 'Hide Prediction' : 'Show Prediction'}
+            </Button>
+          )}
           
           {showPrediction && (
             <div className="mt-4 animate-fade-in">

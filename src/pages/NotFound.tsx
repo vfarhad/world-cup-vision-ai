@@ -13,7 +13,7 @@ const NotFound = () => {
           The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </p>
         <Link to="/">
-          <Button className="bg-fifa-blue hover:bg-fifa-navy">
+          <Button className="bg-fifa-blue hover:bg-fifa-navy text-white">
             Return to Home
           </Button>
         </Link>
