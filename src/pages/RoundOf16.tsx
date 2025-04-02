@@ -2,6 +2,8 @@
 import React from 'react';
 import { KnockoutMatchCard } from './RoundOf32';
 import { mockRoundOf16 } from '@/data/mockData';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const RoundOf16 = () => {
   return (
@@ -18,7 +20,20 @@ const RoundOf16 = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {mockRoundOf16.map((match, index) => (
-          <KnockoutMatchCard key={index} match={match} stageType="Round of 16" />
+          <KnockoutMatchCard 
+            key={index} 
+            match={match} 
+            stageType="Round of 16"
+            renderButton={(matchId) => (
+              <Link to={`/matches/${matchId}`}>
+                <Button 
+                  className="w-full bg-fifa-blue hover:bg-fifa-navy text-white"
+                >
+                  View match details
+                </Button>
+              </Link>
+            )}
+          />
         ))}
       </div>
     </div>
