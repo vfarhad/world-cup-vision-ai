@@ -1099,3 +1099,4 @@ export const mockRoundOf32 = [
     homeQualification: "Runner-up Group B",
     awayTeam: "Qatar",
     awayQualification: "3rd Place Group J",
+    venue
