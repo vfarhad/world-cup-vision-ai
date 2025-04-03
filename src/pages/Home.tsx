@@ -67,37 +67,37 @@ const Home = () => {
               name="MetLife Stadium" 
               location="New York/New Jersey, USA" 
               capacity="82,500"
-              imageUrl="https://placehold.co/600x400/0f5c9c/FFFFFF/png?text=MetLife+Stadium"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/0/03/Metlife_stadium_%28Aerial_view%29.jpg"
             />
             <VenueCard 
               name="SoFi Stadium" 
               location="Los Angeles, USA" 
               capacity="70,240"
-              imageUrl="https://placehold.co/600x400/0f5c9c/FFFFFF/png?text=SoFi+Stadium"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/5/50/SoFi_Stadium_2021.jpg"
             />
             <VenueCard 
               name="Estadio Azteca" 
               location="Mexico City, Mexico" 
               capacity="87,523"
-              imageUrl="https://placehold.co/600x400/0f5c9c/FFFFFF/png?text=Estadio+Azteca"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/8/85/Estadio_Azteca.jpg"
             />
             <VenueCard 
               name="AT&T Stadium" 
               location="Dallas, USA" 
               capacity="80,000"
-              imageUrl="https://placehold.co/600x400/0f5c9c/FFFFFF/png?text=AT&T+Stadium"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/f/f8/Cowboys_Stadium_field.jpg"
             />
             <VenueCard 
               name="BMO Field" 
               location="Toronto, Canada" 
               capacity="45,000"
-              imageUrl="https://placehold.co/600x400/0f5c9c/FFFFFF/png?text=BMO+Field"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/6/68/Bmo_Field.jpg"
             />
             <VenueCard 
               name="BC Place" 
               location="Vancouver, Canada" 
               capacity="54,500"
-              imageUrl="https://placehold.co/600x400/0f5c9c/FFFFFF/png?text=BC+Place"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/1/14/Bcplacestadium.jpg"
             />
           </div>
         </div>
