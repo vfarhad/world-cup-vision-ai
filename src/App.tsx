@@ -11,9 +11,6 @@ import Groups from "./pages/Groups";
 import Matches from "./pages/Matches";
 import RoundOf32 from "./pages/RoundOf32";
 import RoundOf16 from "./pages/RoundOf16";
-import QuarterFinals from "./pages/QuarterFinals";
-import SemiFinals from "./pages/SemiFinals";
-import Finals from "./pages/Finals";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,9 +30,6 @@ const App = () => (
               <Route path="/matches" element={<Matches />} />
               <Route path="/round-of-32" element={<RoundOf32 />} />
               <Route path="/round-of-16" element={<RoundOf16 />} />
-              <Route path="/quarter-finals" element={<QuarterFinals />} />
-              <Route path="/semi-finals" element={<SemiFinals />} />
-              <Route path="/finals" element={<Finals />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
