@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -97,7 +96,7 @@ const Home = () => {
               name="BC Place" 
               location="Vancouver, Canada" 
               capacity="54,500"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/1/14/Bcplacestadium.jpg"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BC_Place_2015_Women%27s_FIFA_World_Cup.jpg/1920px-BC_Place_2015_Women%27s_FIFA_World_Cup.jpg"
             />
           </div>
         </div>
