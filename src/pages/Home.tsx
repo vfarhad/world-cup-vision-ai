@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -84,7 +85,7 @@ const Home = () => {
               name="AT&T Stadium" 
               location="Dallas, USA" 
               capacity="80,000"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/f/f8/Cowboys_Stadium_field.jpg"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg/1920px-Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg"
             />
             <VenueCard 
               name="BMO Field" 
