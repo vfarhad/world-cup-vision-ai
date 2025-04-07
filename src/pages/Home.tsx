@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -79,7 +78,7 @@ const Home = () => {
               name="Estadio Azteca" 
               location="Mexico City, Mexico" 
               capacity="87,523"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/8/85/Estadio_Azteca.jpg"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Estadio_Azteca_Octubre_de_2021.jpg/1199px-Estadio_Azteca_Octubre_de_2021.jpg"
             />
             <VenueCard 
               name="AT&T Stadium" 
@@ -167,4 +166,3 @@ const VenueCard = ({
 };
 
 export default Home;
-
