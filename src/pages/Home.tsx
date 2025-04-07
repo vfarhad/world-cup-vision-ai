@@ -24,7 +24,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/matches">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+                <Button className="bg-fifa-gold hover:bg-yellow-500 text-fifa-navy text-lg px-8 py-6">
                   View Matches
                 </Button>
               </Link>
@@ -117,7 +117,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/matches">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+              <Button className="bg-fifa-gold hover:bg-yellow-500 text-fifa-navy text-lg px-8 py-6">
                 View Matches
               </Button>
             </Link>
