@@ -91,7 +91,7 @@ const Home = () => {
               name="BMO Field" 
               location="Toronto, Canada" 
               capacity="45,000"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/6/68/Bmo_Field.jpg"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/d/d2/BMO_Field_in_2016.png"
             />
             <VenueCard 
               name="BC Place" 
