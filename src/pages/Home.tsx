@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -72,7 +73,7 @@ const Home = () => {
               name="SoFi Stadium" 
               location="Los Angeles, USA" 
               capacity="70,240"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/5/50/SoFi_Stadium_2021.jpg"
+              imageUrl="/lovable-uploads/2258819d-fc17-4599-83d9-5aad3016e4d2.png"
             />
             <VenueCard 
               name="Estadio Azteca" 
