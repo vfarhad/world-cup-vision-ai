@@ -15,6 +15,7 @@ const Navbar = () => {
           </Link>
           <div className="hidden md:flex space-x-6">
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
             <NavLink to="/groups">Groups</NavLink>
             <NavLink to="/matches">Matches</NavLink>
             <NavLink to="/round-of-32">Round of 32</NavLink>
@@ -61,6 +62,7 @@ const MobileMenu = () => {
         <div className="absolute top-16 right-4 bg-fifa-navy p-4 rounded-md shadow-lg z-50">
           <div className="flex flex-col space-y-4">
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
             <NavLink to="/groups">Groups</NavLink>
             <NavLink to="/matches">Matches</NavLink>
             <NavLink to="/round-of-32">Round of 32</NavLink>
