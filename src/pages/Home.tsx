@@ -67,7 +67,7 @@ const Home = () => {
               name="MetLife Stadium" 
               location="New York/New Jersey, USA" 
               capacity="82,500"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/0/03/Metlife_stadium_(Aerial_view).jpg"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/0/03/Metlife_stadium_%28Aerial_view%29.jpg"
             />
             <VenueCard 
               name="SoFi Stadium" 
@@ -167,3 +167,4 @@ const VenueCard = ({
 };
 
 export default Home;
+
