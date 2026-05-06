@@ -125,7 +125,7 @@ const Groups = () => {
                       ))}
                     </TabsList>
                     
-                    {group.teams.map(team => (
+                    {group.teams.map((team: any) => (
                       <TabsContent 
                         key={team.name} 
                         value={team.name.toLowerCase().replace(/\s+/g, '-')}
@@ -142,7 +142,7 @@ const Groups = () => {
                           <div>
                             <h4 className="font-medium text-fifa-navy">Last 5 Matches</h4>
                             <div className="flex space-x-1 mt-1">
-                              {(team.lastFive || ['U', 'U', 'U', 'U', 'U']).map((result, i) => (
+                              {(team.lastFive || ['U', 'U', 'U', 'U', 'U']).map((result: string, i: number) => (
                                 <span 
                                   key={i} 
                                   className={`
