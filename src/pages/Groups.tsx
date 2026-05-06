@@ -160,7 +160,7 @@ const Groups = () => {
                           <div>
                             <h4 className="font-medium text-fifa-navy">Key Players</h4>
                             <ul className="list-disc pl-5 mt-1">
-                              {(team.keyPlayers || ['TBA']).map((player, i) => (
+                              {(team.keyPlayers || ['TBA']).map((player: string, i: number) => (
                                 <li key={i}>{player}</li>
                               ))}
                             </ul>
