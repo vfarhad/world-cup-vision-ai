@@ -20,7 +20,6 @@ const Navbar = () => {
             <NavLink to="/matches">Matches</NavLink>
             <NavLink to="/round-of-32">Round of 32</NavLink>
             <NavLink to="/round-of-16">Round of 16</NavLink>
-            <NavLink to="/predictions">Predictions</NavLink>
           </div>
           <div className="md:hidden">
             <MobileMenu />
@@ -68,7 +67,6 @@ const MobileMenu = () => {
             <NavLink to="/matches">Matches</NavLink>
             <NavLink to="/round-of-32">Round of 32</NavLink>
             <NavLink to="/round-of-16">Round of 16</NavLink>
-            <NavLink to="/predictions">Predictions</NavLink>
           </div>
         </div>
       )}

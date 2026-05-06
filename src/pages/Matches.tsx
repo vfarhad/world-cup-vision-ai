@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 import { mockMatches } from '@/data/mockData';
 
 const Matches = () => {
@@ -129,8 +132,39 @@ const Matches = () => {
 };
 
 const MatchCard = ({ match }: { match: any }) => {
-  const [showPrediction, setShowPrediction] = useState(false);
-  
+  const [prediction, setPrediction] = useState<any>(match.result ? match.prediction : null);
+  const [loading, setLoading] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handlePredict = async () => {
+    if (prediction) {
+      setShow((s) => !s);
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('predict-match', {
+        body: {
+          homeTeam: match.homeTeam,
+          awayTeam: match.awayTeam,
+          group: match.group,
+          venue: match.venue,
+        },
+      });
+      if (error) throw error;
+      if ((data as any)?.error) throw new Error((data as any).error);
+      setPrediction(data);
+      setShow(true);
+    } catch (e: any) {
+      const msg = e?.message || 'Failed to get prediction';
+      if (msg.includes('429')) toast('Rate limit reached, try again shortly.');
+      else if (msg.includes('402')) toast('AI credits exhausted. Please add funds.');
+      else toast(msg);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-fade-in">
       <div className="bg-fifa-navy text-white p-3 flex justify-between items-center">
@@ -159,47 +193,49 @@ const MatchCard = ({ match }: { match: any }) => {
           </div>
           <div className="text-sm text-gray-500 mt-2">{match.venue}</div>
         </div>
-        
+
         <div className="border-t p-4">
           <Button
             variant="outline"
-            onClick={() => setShowPrediction(!showPrediction)}
+            onClick={handlePredict}
+            disabled={loading}
             className="w-full"
           >
-            {showPrediction ? 'Hide Prediction' : 'Show Prediction'}
+            {loading ? (
+              <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Generating AI Prediction...</>
+            ) : prediction ? (
+              show ? 'Hide AI Prediction' : 'Show AI Prediction'
+            ) : (
+              'Get AI Prediction'
+            )}
           </Button>
-          
-          {showPrediction && (
+
+          {show && prediction && (
             <div className="mt-4 animate-fade-in">
-              <h4 className="font-medium text-center mb-2">Match Prediction</h4>
+              <h4 className="font-medium text-center mb-2">AI Match Prediction</h4>
+              {prediction.predictedScore && (
+                <div className="text-center text-sm text-gray-600 mb-2">
+                  Predicted: <span className="font-semibold">{prediction.predictedScore}</span>
+                </div>
+              )}
               <div className="flex justify-between text-sm mb-1">
                 <span>{match.homeTeam}</span>
                 <span>Draw</span>
                 <span>{match.awayTeam}</span>
               </div>
               <div className="flex h-4 rounded-full overflow-hidden">
-                <div 
-                  className="bg-green-500" 
-                  style={{ width: `${match.prediction?.home || 33}%` }}
-                ></div>
-                <div 
-                  className="bg-gray-400" 
-                  style={{ width: `${match.prediction?.draw || 34}%` }}
-                ></div>
-                <div 
-                  className="bg-blue-500" 
-                  style={{ width: `${match.prediction?.away || 33}%` }}
-                ></div>
+                <div className="bg-green-500" style={{ width: `${prediction.home ?? 33}%` }} />
+                <div className="bg-gray-400" style={{ width: `${prediction.draw ?? 34}%` }} />
+                <div className="bg-blue-500" style={{ width: `${prediction.away ?? 33}%` }} />
               </div>
               <div className="flex justify-between text-sm mt-1">
-                <span>{match.prediction?.home || 33}%</span>
-                <span>{match.prediction?.draw || 34}%</span>
-                <span>{match.prediction?.away || 33}%</span>
+                <span>{prediction.home ?? 33}%</span>
+                <span>{prediction.draw ?? 34}%</span>
+                <span>{prediction.away ?? 33}%</span>
               </div>
-              
-              {match.prediction?.comment && (
+              {(prediction.analysis || prediction.comment) && (
                 <div className="mt-3 text-sm bg-gray-50 p-3 rounded">
-                  <p>{match.prediction.comment}</p>
+                  <p>{prediction.analysis || prediction.comment}</p>
                 </div>
               )}
             </div>
