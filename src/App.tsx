@@ -12,7 +12,6 @@ import Groups from "./pages/Groups";
 import Matches from "./pages/Matches";
 import RoundOf32 from "./pages/RoundOf32";
 import RoundOf16 from "./pages/RoundOf16";
-import Predictions from "./pages/Predictions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,7 +32,6 @@ const App = () => (
               <Route path="/matches" element={<Matches />} />
               <Route path="/round-of-32" element={<RoundOf32 />} />
               <Route path="/round-of-16" element={<RoundOf16 />} />
-              <Route path="/predictions" element={<Predictions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
