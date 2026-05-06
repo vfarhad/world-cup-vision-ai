@@ -33,6 +33,7 @@ const App = () => (
               <Route path="/matches" element={<Matches />} />
               <Route path="/round-of-32" element={<RoundOf32 />} />
               <Route path="/round-of-16" element={<RoundOf16 />} />
+              <Route path="/predictions" element={<Predictions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
