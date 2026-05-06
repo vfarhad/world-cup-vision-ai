@@ -76,16 +76,58 @@ const Home = () => {
               imageUrl="/lovable-uploads/2258819d-fc17-4599-83d9-5aad3016e4d2.png"
             />
             <VenueCard 
-              name="Estadio Azteca" 
-              location="Mexico City, Mexico" 
-              capacity="87,523"
-              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Estadio_Azteca_Octubre_de_2021.jpg/1199px-Estadio_Azteca_Octubre_de_2021.jpg"
-            />
-            <VenueCard 
               name="AT&T Stadium" 
               location="Dallas, USA" 
               capacity="80,000"
               imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg/1920px-Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg"
+            />
+            <VenueCard 
+              name="Mercedes-Benz Stadium" 
+              location="Atlanta, USA" 
+              capacity="71,000"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_Stadium_December_2017.jpg/1920px-Mercedes-Benz_Stadium_December_2017.jpg"
+            />
+            <VenueCard 
+              name="NRG Stadium" 
+              location="Houston, USA" 
+              capacity="72,220"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/NRG_Stadium_inside.jpg/1920px-NRG_Stadium_inside.jpg"
+            />
+            <VenueCard 
+              name="Arrowhead Stadium" 
+              location="Kansas City, USA" 
+              capacity="76,416"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Arrowhead_Stadium_aerial_view_2023.jpg/1920px-Arrowhead_Stadium_aerial_view_2023.jpg"
+            />
+            <VenueCard 
+              name="Hard Rock Stadium" 
+              location="Miami, USA" 
+              capacity="65,326"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Hard_Rock_Stadium_logo_unveil.jpg/1920px-Hard_Rock_Stadium_logo_unveil.jpg"
+            />
+            <VenueCard 
+              name="Lincoln Financial Field" 
+              location="Philadelphia, USA" 
+              capacity="69,328"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Lincoln_Financial_Field_July_2018_pano.jpg/1920px-Lincoln_Financial_Field_July_2018_pano.jpg"
+            />
+            <VenueCard 
+              name="Levi's Stadium" 
+              location="San Francisco Bay Area, USA" 
+              capacity="68,500"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Levi%27s_Stadium_-_pre-game_view_from_section_239.jpg/1920px-Levi%27s_Stadium_-_pre-game_view_from_section_239.jpg"
+            />
+            <VenueCard 
+              name="Lumen Field" 
+              location="Seattle, USA" 
+              capacity="68,740"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lumen_Field_2021.jpg/1920px-Lumen_Field_2021.jpg"
+            />
+            <VenueCard 
+              name="Gillette Stadium" 
+              location="Boston, USA" 
+              capacity="65,878"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Gillette_Stadium_July_2022.jpg/1920px-Gillette_Stadium_July_2022.jpg"
             />
             <VenueCard 
               name="BMO Field" 
@@ -98,6 +140,24 @@ const Home = () => {
               location="Vancouver, Canada" 
               capacity="54,500"
               imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BC_Place_2015_Women%27s_FIFA_World_Cup.jpg/1920px-BC_Place_2015_Women%27s_FIFA_World_Cup.jpg"
+            />
+            <VenueCard 
+              name="Estadio Azteca" 
+              location="Mexico City, Mexico" 
+              capacity="87,523"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Estadio_Azteca_2015.jpg/1920px-Estadio_Azteca_2015.jpg"
+            />
+            <VenueCard 
+              name="Estadio Akron" 
+              location="Guadalajara, Mexico" 
+              capacity="48,071"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Estadio_Akron_2.jpg/1920px-Estadio_Akron_2.jpg"
+            />
+            <VenueCard 
+              name="Estadio BBVA" 
+              location="Monterrey, Mexico" 
+              capacity="53,500"
+              imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Estadio_BBVA_Bancomer.jpg/1920px-Estadio_BBVA_Bancomer.jpg"
             />
           </div>
         </div>
